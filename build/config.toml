@@ -4,7 +4,7 @@ title = "Ana Carolina Castro"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-156068410-1"
 theme = "hugo-sustain"
 
 [permalinks]
