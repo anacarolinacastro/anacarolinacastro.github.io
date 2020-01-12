@@ -4,7 +4,7 @@ html, body {
   background-color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid black; /* MUDA AQUI A COR */
+  border-top: 3px solid #6b6b6b; /* MUDA AQUI A COR */
 }
 
 /* Wrapper for page content to push down footer */
@@ -91,7 +91,7 @@ html, body {
   margin: 20px 0;
 }
 .container a {
-  color: black; /* MUDA AQUI A COR */
+  color: #6b6b6b; /* MUDA AQUI A COR */
 }
 .container a:hover {
   color: #267723;
@@ -116,7 +116,7 @@ html, body {
   font-size: 15px;
 }
 .panel-default h4 a, h5 a {
-  color: black; /* MUDA AQUI A COR */
+  color: #6b6b6b; /* MUDA AQUI A COR */
 }
 .panel-default h4 a:hover, h5 a:hover {
   color: #267723;
@@ -189,7 +189,7 @@ html, body {
 	color: #6b6b6b;
 }
 div.footer{
-  border-bottom: 5px solid black;; /* MUDA AQUI A COR */
+  border-bottom: 5px solid #6b6b6b; /* MUDA AQUI A COR */
 }
 /* Set the fixed height of the footer here */
 /*.footer {
