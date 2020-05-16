@@ -27,8 +27,23 @@ theme = "hugo-sustain"
 
 ## Main Menu
 [[menu.main]]
-  name = "blog"
+  name = "home"
   weight = 100
+  identifier = "home"
+  url = "/"
+#[[menu.main]]
+#  name = "about"
+#  weight = 150
+#  identifier = "about"
+#  url = "/about"
+#[[menu.main]]
+#  name = "contact"
+#  weight = 200
+#  identifier = "contact"
+#  url = "/contact"
+[[menu.main]]
+  name = "blog"
+  weight = 250
   identifier = "blog"
   url = "/blog/"
 # [[menu.main]]
