@@ -2,97 +2,38 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Ana Carolina Castro" />
-    <meta name="description" content="Describe your website">
-    <link rel="shortcut icon" type="image/x-icon" href="https://anacarolinacastro.com.br/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://anacarolinacastro.com.br/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://anacarolinacastro.com.br/css/blog.css" rel="stylesheet">
+
     <title>DNS 101</title>
-    <meta name="generator" content="Hugo 0.62.2" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://anacarolinacastro.com.br/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
-    
-    <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-156068410-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
   </head>
 
-  <body>
-    <div id="wrap">
+  <body id="page-top">
+    <a href="/blog">
+      <h4 class="mb-5"> <span class="fa fa-chevron-left"></span> back</h4>
+    </a>
 
-      
-      <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://anacarolinacastro.com.br/"><i class="fa fa-home"></i></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="navbar-collapse collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
-        
-        <li><a href="/blog/">BLOG</a></li>
-        
-      
-      </ul>
-    </div>
-  </div>
-</nav>
+    <h1>
+      <span class="title">DNS 101</span>
+    </h1>
 
-      
-      <div class="container">
-        <div class="blog-post">
-          <h3>
-            <strong><a href="https://anacarolinacastro.com.br/blog/dns-101/">DNS 101</a></strong>
-          </h3>
-        </div>
-        <div class="blog-title">
-          <h4>
-          January 12, 2020
-            &nbsp;&nbsp;
-            
-          </h4>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="blogpost">
-              <!-- raw HTML omitted -->
+    <article class="markdown-body">
+      <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h1 id="the-context">The context</h1>
-<p>In fact, computer only knows about numbers. When configured in networks, the computer can be reached by other using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 are the most known version, it looks like <strong>172.217.29.78</strong> and in each fild we can fave decimal numbers from 0 to 255. But as the number the devices are growing the number of public <a href="https://www.nbcnews.com/news/us-news/internet-now-officially-too-big-ip-addresses-run-out-n386081">IPv4 are running out</a>. In order to fix this issue, the IETF developed a new version of this protocol, the IPv6. The IPv6 has the format is like <strong>2800:3f0:4004:808::200e</strong>, where we have 6 blocks containing up to 4 digits hexdecimal values.</p>
+<h2 id="the-context">The context</h2>
+<p>In fact, computers only knows about numbers. When configured in networks, the computer can be reached by other using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 are the most known version, it looks like <strong>172.217.29.78</strong> and in each fild we can fave decimal numbers from 0 to 255. But as the number the devices are growing the number of public <a href="https://www.nbcnews.com/news/us-news/internet-now-officially-too-big-ip-addresses-run-out-n386081">IPv4 are running out</a>. In order to fix this issue, the IETF developed a new version of this protocol, the IPv6. The IPv6 has the format is like <strong>2800:3f0:4004:808::200e</strong>, where we have 6 blocks containing up to 4 digits hexdecimal values.</p>
 <p>Suppose we want to access Google website and that to access it we have to reach the server 172.217.162.174 at the port 80 (HTTP) and for any other website we want to access we would have to know its IP address like this. It would be horrible to remember the IP address for each website. Luckly, a name resolution protocol know as DNS was created. DNS stands for Domain Name System and work as the contact list of the internet. The DNS server holds the DNS zones configurations, that way the clients can lookup the domain wanted. For example, the user types <code>google.com</code> and hit enter. Then the browser uses the configured DNS server to lookup for the IP that the domain responds and load the web content.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h1 id="the-specification">The specification</h1>
-<h2 id="dns-structure">DNS structure</h2>
+<h2 id="the-specification">The specification</h2>
+<h3 id="dns-structure">DNS structure</h3>
 <p>The smallest part of a DNS structure it the record. To define a record it must be provide a name, a type and a content.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h3 id="dns-types-overview">DNS Types Overview</h3>
+<h4 id="dns-types-overview">DNS Types Overview</h4>
 <p>Between the many records types, there some that are most used and worth to know.</p>
 <table>
 <thead>
@@ -136,9 +77,9 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<h1 id="the-tools">The tools</h1>
+<h2 id="the-tools">The tools</h2>
 <p>The are a lot of command line tools that can be used for DNS lookup. But the most used are <code>host</code>, <code>dig</code> and <code>nslookup</code>. Let's see some usage examples.</p>
-<h4 id="dig">dig</h4>
+<h3 id="1-dig">1) dig</h3>
 <p>First, lets pretend that want to found out the name servers (the <code>NS</code> record type) for a domain, whe can use the <code>host</code> tool passing the DNS type with the <code>-t</code> flag.</p>
 <pre><code>$ dig -t NS globo.com
 
@@ -177,7 +118,7 @@ ns03.globo.com.
 10 mx2.globo.locaweb.com.br.
 5 mx.globo.locaweb.com.br.
 20 mx3.globo.locaweb.com.br.
-</code></pre><h4 id="nslookup">nslookup</h4>
+</code></pre><h3 id="2-nslookup">2) nslookup</h3>
 <p>As done previously with the <code>dig</code> command, lets found out the name servers from <code>globo.com</code>. The command usage is similar, but the output has a differente format.</p>
 <pre><code>$ nslookup -type=NS globo.com
 Server:		8.8.4.4
@@ -190,7 +131,7 @@ globo.com	nameserver = ns02.globo.com.
 globo.com	nameserver = ns03.globo.com.
 
 Authoritative answers can be found from:
-</code></pre><h4 id="host">host</h4>
+</code></pre><h3 id="3-host">3) host</h3>
 <p>Again, lets fetch the name server for <code>globo.com</code>, but with <code>host</code> command this time.</p>
 <pre><code>$ host -t NS globo.com
 globo.com name server ns04.globo.com.
@@ -198,50 +139,19 @@ globo.com name server ns01.globo.com.
 globo.com name server ns02.globo.com.
 globo.com name server ns03.globo.com.
 </code></pre><p>Now that whe know the name server that responds for <code>globo.com</code>, lets check a <code>A</code> record from that zone.</p>
-<h1 id="references">References</h1>
+<h2 id="references">References</h2>
 <ul>
 <li><a href="https://tools.ietf.org/rfc/rfc1035.txt">DNS specification (RFC 1035)</a></li>
 <li><a href="https://tools.ietf.org/html/rfc2460">IPv6 specification (RFC 4560)</a></li>
 </ul>
 
-              <hr>
-              <div class="related-posts">
-                <h5>Related Posts</h5>
-                
-              </div>
-            </div>
-          </div>
-          <hr>
-        <div class="disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-
-    (function() {
-      
-      
-      if (window.location.hostname == "localhost")
-        return;
-
-      var disqus_shortname = '';
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-        </div>
-      </div>
-      
-    </div>
+    </article>
 
     
     <footer>
   <div id="footer">
     <div class="container">
-      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
-      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+      
     </div>
   </div>
 </footer>
@@ -259,7 +169,16 @@ globo.com name server ns03.globo.com.
 <script>hljs.initHighlightingOnLoad();</script>
 
 
+<script src="https://anacarolinacastro.com.br/js/jquery.min.js"></script>
+<script src="https://anacarolinacastro.com.br/js/bootstrap.bundle.min.js"></script>
 
-    
+
+<script src="https://anacarolinacastro.com.br/js/jquery.easing.min.js"></script>
+
+
+<script src="https://anacarolinacastro.com.br/js/resume.min.js"></script>
+
+
+
   </body>
 </html>
