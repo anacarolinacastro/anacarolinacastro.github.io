@@ -17,7 +17,7 @@
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://anacarolinacastro.com.br/blog/dns-101/</guid>
-      <description>The context In fact, computers only knows about numbers. When configured in networks, the computer can be reached by other using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 are the most known version, it looks like 172.217.29.78 and in each fild we can fave decimal numbers from 0 to 255. But as the number the devices are growing the number of public IPv4 are running out.</description>
+      <description>The context In fact, computers only knows about numbers. When configured in networks, the computer can be reached by others using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 is the most known version, it looks like 172.217.29.78 and in each field we can fave decimal numbers from 0 to 255. But as the number of devices are growing the number of public IPv4 are running out.</description>
     </item>
     
   </channel>

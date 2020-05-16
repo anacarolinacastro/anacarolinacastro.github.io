@@ -23,18 +23,18 @@
       <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="the-context">The context</h2>
-<p>In fact, computers only knows about numbers. When configured in networks, the computer can be reached by other using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 are the most known version, it looks like <strong>172.217.29.78</strong> and in each fild we can fave decimal numbers from 0 to 255. But as the number the devices are growing the number of public <a href="https://www.nbcnews.com/news/us-news/internet-now-officially-too-big-ip-addresses-run-out-n386081">IPv4 are running out</a>. In order to fix this issue, the IETF developed a new version of this protocol, the IPv6. The IPv6 has the format is like <strong>2800:3f0:4004:808::200e</strong>, where we have 6 blocks containing up to 4 digits hexdecimal values.</p>
-<p>Suppose we want to access Google website and that to access it we have to reach the server 172.217.162.174 at the port 80 (HTTP) and for any other website we want to access we would have to know its IP address like this. It would be horrible to remember the IP address for each website. Luckly, a name resolution protocol know as DNS was created. DNS stands for Domain Name System and work as the contact list of the internet. The DNS server holds the DNS zones configurations, that way the clients can lookup the domain wanted. For example, the user types <code>google.com</code> and hit enter. Then the browser uses the configured DNS server to lookup for the IP that the domain responds and load the web content.</p>
+<p>In fact, computers only knows about numbers. When configured in networks, the computer can be reached by others using a defined IP (Internet Protocol). Currently, there are two IP versions, IPv4 and IPv6. IPv4 is the most known version, it looks like <strong>172.217.29.78</strong> and in each field we can fave decimal numbers from 0 to 255. But as the number of devices are growing the number of public <a href="https://www.nbcnews.com/news/us-news/internet-now-officially-too-big-ip-addresses-run-out-n386081">IPv4 are running out</a>. In order to fix this issue, the IETF developed a new version of this protocol, the IPv6. The IPv6 has the format is like <strong>2800:3f0:4004:808::200e</strong>, where we have 6 blocks containing up to 4 digits hexadecimal values.</p>
+<p>Suppose we want to access Google website and to access it we have to reach the server 172.217.162.174 at the port 80 (HTTP) and for any other website we want to access we would have to know its IP address like this. It would be horrible to remember the IP address for each website. Luckly, a name resolution protocol known as DNS was created. DNS stands for Domain Name System and works as the contact list of the internet. The DNS server holds the DNS zones configurations, that way the clients can lookup the domain wanted. For example, the user types <code>google.com</code> and hit enter. Then the browser uses the configured DNS server to look for the IP that the domain responds to and load the web content.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="the-specification">The specification</h2>
 <h3 id="dns-structure">DNS structure</h3>
-<p>The smallest part of a DNS structure it the record. To define a record it must be provide a name, a type and a content.</p>
+<p>The smallest part of a DNS structure it the record. To define a record it must provide a name, a type and a content.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h4 id="dns-types-overview">DNS Types Overview</h4>
-<p>Between the many records types, there some that are most used and worth to know.</p>
+<p>Between the many records types, there are some that are most used and worth to know.</p>
 <table>
 <thead>
 <tr>
@@ -78,9 +78,9 @@
 </tbody>
 </table>
 <h2 id="the-tools">The tools</h2>
-<p>The are a lot of command line tools that can be used for DNS lookup. But the most used are <code>host</code>, <code>dig</code> and <code>nslookup</code>. Let's see some usage examples.</p>
+<p>There are a lot of command line tools that can be used for DNS lookup. But the most used are <code>host</code>, <code>dig</code> and <code>nslookup</code>. Let's see some usage examples.</p>
 <h3 id="1-dig">1) dig</h3>
-<p>First, lets pretend that want to found out the name servers (the <code>NS</code> record type) for a domain, whe can use the <code>host</code> tool passing the DNS type with the <code>-t</code> flag.</p>
+<p>First, let's pretend that we want to find out the name servers (the <code>NS</code> record type) for a domain, whe can use the <code>host</code> tool passing the DNS type with the <code>-t</code> flag.</p>
 <pre><code>$ dig -t NS globo.com
 
 ; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -t NS globo.com
@@ -110,16 +110,16 @@ ns04.globo.com.
 ns02.globo.com.
 ns01.globo.com.
 ns03.globo.com.
-</code></pre><p>Now that we know the name servers that owns the <code>globo.com</code> zone configuration, we can lookup a host directly to it by providing the DNS server after the <code>@</code> symbol. The benefit of doing this, is to skip the cached DNS at the internet servers. For the people that administer DNS servers, this is a very useful trick.</p>
+</code></pre><p>Now that we know the name servers that own the <code>globo.com</code> zone configuration, we can lookup a host directly to it by providing the DNS server after the <code>@</code> symbol. The benefit of doing this, is to skip the cached DNS at the internet servers. For the people that administer DNS servers, this is a very useful trick.</p>
 <pre><code>$ dig +short -t A globoplay.globo.com @ns1.globo.com
 131.0.25.109
-</code></pre><p>Lets try do get the mailing exchange info from <code>globo.com</code>.</p>
+</code></pre><p>Let's try to get the mailing exchange info from <code>globo.com</code>.</p>
 <pre><code>$ dig +short -t MX globo.com
 10 mx2.globo.locaweb.com.br.
 5 mx.globo.locaweb.com.br.
 20 mx3.globo.locaweb.com.br.
 </code></pre><h3 id="2-nslookup">2) nslookup</h3>
-<p>As done previously with the <code>dig</code> command, lets found out the name servers from <code>globo.com</code>. The command usage is similar, but the output has a differente format.</p>
+<p>As done previously with the <code>dig</code> command, let's find out the name servers from <code>globo.com</code>. The command usage is similar, but the output has a different format.</p>
 <pre><code>$ nslookup -type=NS globo.com
 Server:		8.8.4.4
 Address:	8.8.4.4#53
@@ -138,7 +138,7 @@ globo.com name server ns04.globo.com.
 globo.com name server ns01.globo.com.
 globo.com name server ns02.globo.com.
 globo.com name server ns03.globo.com.
-</code></pre><p>Now that whe know the name server that responds for <code>globo.com</code>, lets check a <code>A</code> record from that zone.</p>
+</code></pre><p>Now that we know the name server that responds for <code>globo.com</code>, let's check a <code>A</code> record from that zone.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://tools.ietf.org/rfc/rfc1035.txt">DNS specification (RFC 1035)</a></li>
@@ -147,11 +147,11 @@ globo.com name server ns03.globo.com.
 
     </article>
 
-
+    
     <footer>
   <div id="footer">
     <div class="container">
-
+      
     </div>
   </div>
 </footer>
